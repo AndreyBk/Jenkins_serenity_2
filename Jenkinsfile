@@ -18,6 +18,7 @@ pipeline {
          stage ('My build'){
             steps {
                sh 'gradle build'
+               sh 'gradlew test aggregate'
             }
          }
     }
