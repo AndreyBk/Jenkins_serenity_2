@@ -9,16 +9,16 @@ pipeline {
 
     stages{
 
-         stage ('Hello 1'){
-            steps {
-                  echo '*******************************123***********'
-            }
-         }
+#         stage ('Hello 1'){
+#            steps {
+#                  echo '*******************************123***********'
+#            }
+#         }
 
          stage ('My build'){
             steps {
                sh 'gradle build'
-               sh 'gradlew test aggregate'
+#               sh 'gradlew test aggregate'
             }
          }
     }
