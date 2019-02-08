@@ -1,6 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'net.serenity-bdd.aggregator'
 
+//mainClassName="ru.mail.propre.Main"
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
 repositories {
     mavenLocal()
     jcenter()
@@ -29,6 +33,11 @@ dependencies {
     testCompile 'net.serenity-bdd:serenity-junit:' + serenityVersion
     testCompile 'org.assertj:assertj-core:3.4+'
     testCompile 'org.slf4j:slf4j-simple:1.7+'
+}
+jar {
+    baseName = '/artifact/name_serenity'
+    version='0.1.0'
+    manifest.attributes("Main_Class":"ru.mail.propre.Main")
 }
 
 gradle.startParameter.continueOnFailure = true
