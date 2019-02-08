@@ -1,0 +1,11 @@
+#.gradle/
+#/gradle/
+/out/
+/target/
+build/
+/classes
+
+.idea
+#*.iml
+#gradlew
+#gradlew.bat
