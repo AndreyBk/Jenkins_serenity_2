@@ -42,8 +42,8 @@ public class MainPageTestSelenium extends PageObject {
         System.setProperty("webdriver.chrome.driver", "C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
 //        WebDriver _driver;
 //        _driver = new ChromeDriver();
-        _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        _driver.manage().window().maximize();
+//        _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//        _driver.manage().window().maximize();
         _driver.get("https://github.com");
 
         _main_page_ = new MainPage(_driver);
