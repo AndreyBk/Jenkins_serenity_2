@@ -33,6 +33,8 @@ dependencies {
     testCompile 'net.serenity-bdd:serenity-junit:' + serenityVersion
     testCompile 'org.assertj:assertj-core:3.4+'
     testCompile 'org.slf4j:slf4j-simple:1.7+'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
 }
 jar {
     baseName = 'name_serenity'

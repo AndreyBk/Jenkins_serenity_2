@@ -1,4 +1,4 @@
-package page_objects;
+package ru.mail.propre;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
