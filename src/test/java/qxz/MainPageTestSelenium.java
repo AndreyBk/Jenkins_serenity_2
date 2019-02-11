@@ -40,7 +40,7 @@ public class MainPageTestSelenium extends PageObject {
     //    @Test
     public void SignIn() {
         System.out.println("***MainPageTestSelenium*** SignIn");
-//        System.setProperty("webdriver.chrome.driver", "C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions _options=new ChromeOptions();
         _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         WebDriver _driver;
