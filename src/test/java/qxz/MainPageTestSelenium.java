@@ -48,7 +48,7 @@ public class MainPageTestSelenium extends PageObject {
         _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 //        _options = _driver.ChromeOptions();
         _options.addArguments("--headless");
-        _options.addArguments("--disable-gpu");
+//        _options.addArguments("--disable-gpu");
         _options.addArguments("window-size=1024,768");
         _options.addArguments("--no-sandbox");
         _driver = new ChromeDriver(_options);
