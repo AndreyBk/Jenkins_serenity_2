@@ -41,10 +41,18 @@ public class MainPageTestSelenium extends PageObject {
     public void SignIn() {
         System.out.println("***MainPageTestSelenium*** SignIn");
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
+
         ChromeOptions _options=new ChromeOptions();
-        _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         WebDriver _driver;
+        _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//        _options = _driver.ChromeOptions();
+        _options.addArguments("--headless");
+        _options.addArguments("--disable-gpu");
+        _options.addArguments("window-size=1024,768");
+        _options.addArguments("--no-sandbox");
         _driver = new ChromeDriver(_options);
+
+
         _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         _driver.manage().window().maximize();
         _driver.get("https://github.com");
