@@ -21,7 +21,7 @@ public class MainPageSteps {
 
     @Step
     public void verifi() {
-        Assert.assertTrue(true);
+        Assert.assertTrue(false);
 
     }
 
