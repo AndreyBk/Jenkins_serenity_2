@@ -4,6 +4,7 @@ import net.thucydides.core.pages.PageObject;
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import ru.mail.propre.MainPage;
 import ru.mail.propre.SignInPage;
 import ru.mail.propre.SignUpPage;
@@ -40,8 +41,10 @@ public class MainPageTestSelenium extends PageObject {
     public void SignIn() {
         System.out.println("***MainPageTestSelenium*** SignIn");
 //        System.setProperty("webdriver.chrome.driver", "C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
+        ChromeOptions _options=new ChromeOptions();
+        _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         WebDriver _driver;
-        _driver = new ChromeDriver();
+        _driver = new ChromeDriver(_options);
         _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         _driver.manage().window().maximize();
         _driver.get("https://github.com");
