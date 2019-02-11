@@ -37,7 +37,7 @@ dependencies {
 jar {
     baseName = 'name_serenity'
     version='0.1.1'
-    manifest.attributes("Main_Class":"ru.mail.propre.Main")
+    manifest.attributes("Main-Class":"ru.mail.propre.Main")
 }
 
 gradle.startParameter.continueOnFailure = true
