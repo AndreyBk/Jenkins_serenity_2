@@ -41,6 +41,7 @@ public class MainPageTestSelenium extends PageObject {
     public void SignIn() {
         System.out.println("***MainPageTestSelenium*** SignIn");
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
 
         ChromeOptions _options=new ChromeOptions();
         WebDriver _driver;
