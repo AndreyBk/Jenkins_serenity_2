@@ -12,7 +12,7 @@ import ru.mail.propre.SignUpPage;
 import java.util.concurrent.TimeUnit;
 
 //import static steps.MainPageSteps._main_page_;
-import static tests.MainPageTest._driver;
+import static tests.MainPageTest._driver_serenity;
 
 //@DefaultUrl("https://github.com")
 public class MainPageTestSelenium extends PageObject {
@@ -26,39 +26,42 @@ public class MainPageTestSelenium extends PageObject {
 //@Steps
     MainPage _main_page_;
 
-    @Before
+/*    @Before
     public void setUpStep() {
         System.out.println("***MainPageTestSelenium*** Before");
 //      _driver = new ChromeDriver();
-        _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        _driver.manage().window().maximize();
+        _driver_serenity.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        _driver_serenity.manage().window().maximize();
 //        _driver.get("https://github.com");
-        _main_page_ = new MainPage(_driver);
+        _main_page_ = new MainPage(_driver_serenity);
     }
-
+*/
 
     //    @Test
     public void SignIn() {
         System.out.println("***MainPageTestSelenium*** SignIn");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
 //        System.setProperty("webdriver.chrome.driver", "//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
 
+        /*
         ChromeOptions _options=new ChromeOptions();
         WebDriver _driver;
         _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-//        _options = _driver.ChromeOptions();
         _options.addArguments("--headless");
-//        _options.addArguments("--disable-gpu");
+        _options.addArguments("--disable-gpu");
         _options.addArguments("window-size=1024,768");
         _options.addArguments("--no-sandbox");
         _driver = new ChromeDriver(_options);
-
-
         _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         _driver.manage().window().maximize();
         _driver.get("https://github.com");
 
         _main_page_ = new MainPage(_driver);
+        */
+        _driver_serenity.get("https://github.com");
+        _driver_serenity.manage().window().maximize();
+        _main_page_=new MainPage(_driver_serenity);
+
 
         SignInPage _login_page = _main_page_.clickSignIn();
         System.out.println(_login_page.getHiderSignInPage());
@@ -89,12 +92,12 @@ public class MainPageTestSelenium extends PageObject {
         Assert.assertFalse(_main_page_.verifiHintFiledUsername());
     }
 
-    @After
-    public void tearDown() {
-        System.out.println("***MainPageTestSelenium*** After");
-
-        _driver.quit();
-    }
+//    @After
+//    public void tearDown() {
+//        System.out.println("***MainPageTestSelenium*** After");
+//
+//        _driver.quit();
+//    }
 
 
 }

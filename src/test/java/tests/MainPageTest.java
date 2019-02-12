@@ -11,11 +11,11 @@ import steps.MainPageSteps;
 @RunWith(SerenityRunner.class)
 public class MainPageTest {
 
-    @Steps
+    @Steps (actor = "Ivan Ivanov")
     private MainPageSteps _main_page_steps;
 
     @Managed(driver = "chrome")
-    public static WebDriver _driver;
+    public static WebDriver _driver_serenity;
 
 
 //
@@ -24,7 +24,7 @@ public class MainPageTest {
 //        _main_page_steps.open_main_page();
 
         System.out.println("***MainPageTest***");
-        _main_page_steps.clickSignIn();
+        _main_page_steps.clickSignIn(123);
 //        _main_page_steps.verifi();
     }
 

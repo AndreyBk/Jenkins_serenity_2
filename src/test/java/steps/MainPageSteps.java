@@ -10,11 +10,12 @@ public class MainPageSteps {
     MainPageTestSelenium _main_page;
 //    public static MainPage _main_page_;
 
+    String actor;
 
 
 
     @Step("#actor  press key SignIn {0}")
-    public void clickSignIn() {//перейти на страницу входа для зарегистрированного пользователя
+    public void clickSignIn(int _a) {//перейти на страницу входа для зарегистрированного пользователя
         System.out.println("***MainPageSteps***   clickSignIn");
         _main_page.SignIn();
 
