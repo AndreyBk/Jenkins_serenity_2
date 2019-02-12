@@ -43,7 +43,7 @@ public class MainPageTestSelenium extends PageObject {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
 //        System.setProperty("webdriver.chrome.driver", "//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
 
-        /*
+        //selenium
         ChromeOptions _options=new ChromeOptions();
         WebDriver _driver;
         _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
@@ -57,11 +57,12 @@ public class MainPageTestSelenium extends PageObject {
         _driver.get("https://github.com");
 
         _main_page_ = new MainPage(_driver);
-        */
+        
+        /* serenity
         _driver_serenity.get("https://github.com");
         _driver_serenity.manage().window().maximize();
         _main_page_=new MainPage(_driver_serenity);
-
+        */
 
         SignInPage _login_page = _main_page_.clickSignIn();
         System.out.println(_login_page.getHiderSignInPage());
