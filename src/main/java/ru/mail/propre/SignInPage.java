@@ -1,11 +1,11 @@
 package ru.mail.propre;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
 
 public class SignInPage {
-    private WebDriver _driver_chrome;
+/*    private WebDriver _driver_chrome;
     WebElement _text_hider,_filed_username_or_email,_filed_password,_button_sign_in,_error,_link_create_acc;
 
     public SignInPage(WebDriver _driver_chrome) {
@@ -51,7 +51,7 @@ public class SignInPage {
 
 
 
-
+*/
 
 
 

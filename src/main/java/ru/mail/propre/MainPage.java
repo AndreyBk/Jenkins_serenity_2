@@ -1,14 +1,12 @@
 package ru.mail.propre;
 
-//import net.thucydides.core.annotations.DefaultUrl;
-//import net.thucydides.core.pages.PageObject;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
-
-public class MainPage {
+public class MainPage  {
+    MainPage _m;
     private WebDriver _driver_chrome;
     private WebElement _button_sign_in, _button_sign_up, _button_sign_up_for_github, _filed_username, _filed_email,
             _filed_password, _text_hider, _hint_filed_username;
@@ -25,12 +23,13 @@ public class MainPage {
 
     }
 
+//    public SignInPage clickSignIn() {//перейти на страницу входа для зарегистрированного пользователя
+//        _button_sign_in.click();
+//        return new SignInPage(_driver_chrome);
+//    }
 
-    public SignInPage clickSignIn() {//перейти на страницу входа для зарегистрированного пользователя
-        _button_sign_in.click();
-        return new SignInPage(_driver_chrome);
-    }
 
+/*
     public SignUpPage clickSignUp() {
         _button_sign_up.click();
         return new SignUpPage(_driver_chrome);
@@ -82,5 +81,5 @@ public class MainPage {
 
 
 
-
+*/
 }

@@ -1,30 +1,16 @@
 package qxz;
 
-import net.thucydides.core.pages.PageObject;
-import org.junit.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import ru.mail.propre.MainPage;
-import ru.mail.propre.SignInPage;
-import ru.mail.propre.SignUpPage;
+import org.junit.Assert;
+import page_objects.MainPage;
+import page_objects.SignInPage;
 
-import java.util.concurrent.TimeUnit;
+import static tests.SignInMainPageTest._driver_serenity;
 
-//import static steps.MainPageSteps._main_page_;
-import static tests.MainPageTest._driver_serenity;
 
-//@DefaultUrl("https://github.com")
-public class MainPageTestSelenium extends PageObject {
-//    private WebDriver _driver;
-//    private MainPage _main_page;
+public class MainPageTestSelenium {
 
-    //    @BeforeClass
-//    public static void setUpTest() {
-//        System.setProperty("webdriver.chrome.driver", "C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
-//    }
-//@Steps
-    MainPage _main_page_;
+//    MainPage _main_page_;
+//    SignInPage _login_page;
 
 /*    @Before
     public void setUpStep() {
@@ -36,39 +22,50 @@ public class MainPageTestSelenium extends PageObject {
         _main_page_ = new MainPage(_driver_serenity);
     }
 */
-
-    //    @Test
+/*
     public void SignIn() {
-        System.out.println("***MainPageTestSelenium*** SignIn");
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
-//        System.setProperty("webdriver.chrome.driver", "//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "//C:\\BK\\JavaProjects\\web_drivers\\chromedriver_win32\\chromedriver.exe");
 
-        //selenium
-        ChromeOptions _options=new ChromeOptions();
-        WebDriver _driver;
-        _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        _options.addArguments("--headless");
-        _options.addArguments("--disable-gpu");
-        _options.addArguments("window-size=1024,768");
-        _options.addArguments("--no-sandbox");
-        _driver = new ChromeDriver(_options);
-        _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        _driver.manage().window().maximize();
-        _driver.get("https://github.com");
+       //selenium
+//        ChromeOptions _options=new ChromeOptions();
+//        WebDriver _driver;
+//        _options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//        _options.addArguments("--headless");
+//        _options.addArguments("--disable-gpu");
+//        _options.addArguments("window-size=1024,768");
+//        _options.addArguments("--no-sandbox");
+//        _driver = new ChromeDriver(_options);
+//        _driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//        _driver.manage().window().maximize();
+//        _driver.get("https://github.com");
+//
+//        _main_page_ = new MainPage(_driver);
 
-        _main_page_ = new MainPage(_driver);
-        
-        /* serenity
-        _driver_serenity.get("https://github.com");
+         //serenity
+//        _driver_serenity.get("https://github.com");
         _driver_serenity.manage().window().maximize();
-        _main_page_=new MainPage(_driver_serenity);
-        */
 
-        SignInPage _login_page = _main_page_.clickSignIn();
+
+
+
+
+//        _main_page_=new MainPage(_driver_serenity);
+        _main_page_.open();
+        _login_page = _main_page_.clickSignIn();
         System.out.println(_login_page.getHiderSignInPage());
         Assert.assertTrue(_login_page.getHiderSignInPage().equals("Sign in to GitHub"));
     }
 
+
+
+
+
+
+
+
+
+/*
     //    @Test
     public void sign_up_big_green_button() {
         SignUpPage _sign_up_page = _main_page_.clickSignUpForGit();//
@@ -100,5 +97,5 @@ public class MainPageTestSelenium extends PageObject {
 //        _driver.quit();
 //    }
 
-
+*/
 }
