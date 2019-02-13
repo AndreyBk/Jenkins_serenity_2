@@ -36,29 +36,29 @@ public class SignInPage extends PageObject {
 ////        _error = _driver_chrome.findElement(By.xpath("//div[@id='js-flash-container']//*[@class='container']"));
 //        _link_create_acc = _driver_chrome.findElement(By.xpath("//*[@id=\"login\"]/p/a"));
 
-//    public SignInPage typeUsername (String username){
+//    public ru.mail.propre.SignInPage typeUsername (String username){
 //        _filed_username_or_email.sendKeys(username);
 //        return this;
 //    }
 //
-//    public SignInPage typePassword (String password){
+//    public ru.mail.propre.SignInPage typePassword (String password){
 //        _filed_password.sendKeys(password);
 //        return this;
 //    }
 //
-//    public SignInPage loginWithInvalidCreds(String username, String password){//для невалидных данных
+//    public ru.mail.propre.SignInPage loginWithInvalidCreds(String username, String password){//для невалидных данных
 //        typeUsername(username);
 //        typePassword(password);
 //        _button_sign_in.click();
-//        return new SignInPage(_driver_chrome);
+//        return new ru.mail.propre.SignInPage(_driver_chrome);
 //    }
 //    public String getErrorText (){
 //        return _error.getText();
 //    }
 //
-//    public SignUpPage createAccount (){
+//    public ru.mail.propre.SignUpPage createAccount (){
 //        _link_create_acc.click();
-//        return new SignUpPage(_driver_chrome);
+//        return new ru.mail.propre.SignUpPage(_driver_chrome);
 //    }
 
 

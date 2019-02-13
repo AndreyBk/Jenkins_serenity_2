@@ -12,7 +12,7 @@ pipeline {
 
 
          stage ('My build'){
-            steps {
+            Serenity_steps {
                sh 'gradle build'
                sh 'gradle clean test'
                sh 'gradle test aggregate'

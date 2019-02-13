@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
 
-import static tests.SignInMainPageTest._driver_serenity;
+import static Serenity_tests.SignInMainPageTest._driver_serenity;
 
 @DefaultUrl("https://github.com")
 public class MainPage extends PageObject {
@@ -51,6 +51,14 @@ public class MainPage extends PageObject {
         ArrayList<WebElement> _verifi = (ArrayList<WebElement>) _driver_serenity.findElements(By.xpath("//input[@class='form-control form-control-lg input-block is-autocheck-successful']"));
         return _verifi.size()==0;
     }
+
+//    public List<String> getActions() {
+//        return findAll(".view").stream()
+//                .map(WebElementFacade::getText)
+//                .collect(Collectors.toList());
+//    }
+
+
 /*
 
     public void typeEmail(String e_mail) {
@@ -72,7 +80,7 @@ public class MainPage extends PageObject {
         this.typeEmail(email);
         typePassword(password);
         clickSignUpForGit();
-        return new SignUpPage(_driver_chrome);
+        return new ru.mail.propre.SignUpPage(_driver_chrome);
     }
 */
 

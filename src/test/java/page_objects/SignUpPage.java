@@ -19,7 +19,7 @@ public class SignUpPage extends PageObject {
 /*    private WebDriver _driver_chr;
     private WebElement _filed_username, _text_hint_username,_filed_email,_text_hint_email,_filed_password,_text_fragment_hint_password,_hider_sign_up_page,_text_hider;
 
-    public SignUpPage(WebDriver _driver_chrome) {
+    public ru.mail.propre.SignUpPage(WebDriver _driver_chrome) {
         this._driver_chr = _driver_chrome;
         _filed_username = _driver_chr.findElement(By.xpath("//*[@id='user_login']"));
 //        _text_hint_username = _driver_chr.findElement(By.xpath("//*[@id='signup-form']/auto-check[1]/dl/dd/p"));
@@ -36,7 +36,7 @@ public class SignUpPage extends PageObject {
 
 
 
-    public SignUpPage typeUsername(String username) {
+    public ru.mail.propre.SignUpPage typeUsername(String username) {
         _filed_username.sendKeys(username);
         return this;
     }
@@ -45,7 +45,7 @@ public class SignUpPage extends PageObject {
         return _text_hint_username.getText();
     }
 
-    public SignUpPage typeEmail(String email) {
+    public ru.mail.propre.SignUpPage typeEmail(String email) {
         _filed_email.sendKeys(email);
         return this;
     }
@@ -54,7 +54,7 @@ public class SignUpPage extends PageObject {
         return _text_hint_email.getText();
     }
 
-    public SignUpPage typePassword (String password){
+    public ru.mail.propre.SignUpPage typePassword (String password){
         _filed_password.sendKeys(password);
         return this;
     }

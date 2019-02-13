@@ -1,12 +1,14 @@
 package ru.mail.propre;
 
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class SignUpPage {
-/*    private WebDriver _driver_chr;
+    private WebDriver _driver_chr;
     private WebElement _filed_username, _text_hint_username,_filed_email,_text_hint_email,_filed_password,_text_fragment_hint_password,_hider_sign_up_page,_text_hider;
+//<span class="js-more-than-n-chars text-green">more than 15 characters</span>
+//<span class="js-more-than-n-chars text-red">more than 15 characters</span>
 
     public SignUpPage(WebDriver _driver_chrome) {
         this._driver_chr = _driver_chrome;
@@ -60,5 +62,5 @@ public class SignUpPage {
     public String get_hider_sign_up_page(){
         return _hider_sign_up_page.getText();
     }
-*/
+
 }
